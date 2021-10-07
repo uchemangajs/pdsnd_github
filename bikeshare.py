@@ -6,44 +6,47 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
-def get_filters():
-    """
+def new_func():
+    def get_filters():
+        """
     Asks user to specify a city, month, and day to analyze.
-
     Returns:
         (str) city - name of the city to analyze
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    print('Hello! Let\'s explore some US bikeshare data!')
+        print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    while True:
-        city = input("\n Which city would love to see the statistics?\n Please choose between New York city, Chicago, or Washington DC.\n").lower()
-        if city not in ('new york city', 'chicago', 'washington'):
-            print("Please we only accept the following cities: New York, Chicago an Washington.")
-            continue
-        else:
-            break
+        while True:
+            city = input("\n Which city would love to see the statistics?\n Please choose between New York city, Chicago, or Washington DC.\n").lower()
+            if city not in ('new york city', 'chicago', 'washington'):
+                print("Please we only accept the following cities: New York, Chicago an Washington.")
+                continue
+            else:
+                break
 
     # TO DO: get user input for month (all, january, february, ... , june)
-    while True:
-        month = input("\nWhich month would you like to see the data? January, February, March, April, May, June or type 'all' if you do not have any preference?\n").lower()
-        if month not in ('january', 'february', 'march', 'april', 'may', 'june', 'all'):
-            print("Sorry, please enter a month of the year or all. Try again")
-            continue
-        else:
-            break
+        while True:
+            month = input("\nWhich month would you like to see the data? January, February, March, April, May, June or type 'all' if you do not have any preference?\n").lower()
+            if month not in ('january', 'february', 'march', 'april', 'may', 'june', 'all'):
+                print("Sorry, please enter a month of the year or all. Try again")
+                continue
+            else:
+                break
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
-    while True:
-        day = input("\nAre you looking for a particular day? If so, kindly enter the day as follows: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or type 'all' if you do not have any preference.\n").lower()
-        if day not in ('sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'all'):
-            print("Sorry, type in a valid day. Try again")
-            continue
-        else:
-            break
-    print('-'*40)
-    return city, month, day
+        while True:
+            day = input("\nAre you looking for a particular day? If so, kindly enter the day as follows: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or type 'all' if you do not have any preference.\n").lower()
+            if day not in ('sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'all'):
+                print("Sorry, type in a valid day. Try again")
+                continue
+            else:
+                break
+        print('-'*40)
+        return city, month, day
+    return get_filters
+
+get_filters = new_func()
 
 
 def load_data(city, month, day):
