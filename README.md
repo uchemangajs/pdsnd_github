@@ -59,4 +59,4 @@ Finally, the user is prompted with the choice of starting all over or view raw d
 * [Juno Lee](https://github.com/junolee) - she is an excellent course instructor.
 * [pandas docs](http://pandas.pydata.org/pandas-docs/stable/) - pandas documentation was immensely helpful in understanding the implemention of pandas methods used in this project.
 * [Udacity](https://udacity.com) - Udacity's Data Analyst Nanodegree program and their instructors were extremely helpful while I was pursuing this project.
-* Finally, I'd like to mention my college courses on Principles of Econometrics and Intermediary Econometrics for introducing me to data analysis and Eviews. The concepts embodied in the pandas library (e.g. data frame) were very similar to the ones used while I was working on my stata projects for college project.
+* Finally, I'd like to mention my college courses on Principles of Econometrics and applied Economics for introducing me to data analysis, Stta nd  Eviews. The concepts embodied in the pandas library (e.g. data frame) were very similar to the ones used while I was working on my stata projects for college project.
